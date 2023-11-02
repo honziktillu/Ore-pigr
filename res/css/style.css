@@ -1,0 +1,100 @@
+/* 
+
+./ daná složka kde se soubor nachází
+../ o jednu složku zpět
+
+*/
+@font-face {
+  font-family: "Minecraft";
+  src: url(../fonts/minecraft.otf);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Minecraft";
+  user-select: none;
+}
+
+body {
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#stone {
+  max-width: 150px;
+  width: 100%;
+  margin: 0 auto;
+  transition: .3s cubic-bezier(0.25, 0.1, 0.2, 1.97);
+  animation: .5s blockanim cubic-bezier(0.25, 0.1, 0.26, 1.57);
+}
+
+#stone:hover {
+  transform: scale(1.4);
+}
+
+#stone:active {
+  transform: scale(1.1);
+  transition: .05s ease;
+}
+
+#counter {
+  font-size: 42px;
+  width: fit-content;
+  margin: 40px auto;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+  transition: .2s ease;
+}
+
+#counter:hover {
+  transform: scale(1.1);
+}
+
+button {
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: white;
+  padding: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  outline: 2px solid black;
+  background-color: #6f6d70;
+  border-top: 2px solid #a6aca7;
+  border-left: 2px solid #a6aca7;
+  border-bottom: 2px solid #535552;
+  border-right: 2px solid #535552;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  background-color: #8380b7;
+}
+
+@keyframes blockanim {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
