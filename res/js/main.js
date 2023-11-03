@@ -23,7 +23,7 @@ clickUpgrade.onclick = () => {
   if (numberOfStones >= clickUpgradePrice) {
     numberOfStones -= clickUpgradePrice;
     clickUpgradePrice *= 2;
-    clickUpgrade.innerText = "Buy click upgrade: " + clickUpgradePrice;
+    clickUpgrade.innerText = "Buy mine upgrade: " + clickUpgradePrice;
     counter.innerText = "Mined: " + numberOfStones;
     stoneincreaseNumber++;
   }
@@ -33,7 +33,7 @@ autoclickerUpgrade.onclick = () => {
   if (numberOfStones >= autoclickerUpgradePrice) {
     numberOfStones -= autoclickerUpgradePrice;
     autoclickerUpgradePrice *= 2;
-    autoclickerUpgrade.innerText = "Buy autoclicker upgrade: " + autoclickerUpgradePrice;
+    autoclickerUpgrade.innerText = "Buy automine upgrade: " + autoclickerUpgradePrice;
     counter.innerText = "Mined: " + numberOfStones;
     cookieAutoclickerincreaseNumber++;
     clearInterval(autoclickerInterval);
